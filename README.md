@@ -41,7 +41,6 @@ This repository contains the scripts, configuration files, and documentation for
 ## Goals
 
 - Single codebase that can build out a complete environment end-to-end
-- Environment selection via a single config variable — no forking, no duplicating scripts
 - Deploy: 
   - Harvester (SUSE Virtualization) 
   - 3 x VMs (SL-Micro)
@@ -97,7 +96,7 @@ All IPs are derived from `${IP_PREFIX}` defined in `env.sh`.
 | .105 | nuc-X5 | Harvester node 5 |
 | .106 | nuc-X6 | Harvester node 6 |
 
-Wildcard DNS: `*.apps.prime.kubernerdes.com` → `${IP_PREFIX}.230`
+Wildcard DNS: `*.apps.prime.kubernerdes.com` → `${IP_PREFIX}.51`
 
 ---
 
@@ -105,12 +104,13 @@ Wildcard DNS: `*.apps.prime.kubernerdes.com` → `${IP_PREFIX}.230`
 
 **Prerequisites**
 
-- 3 x NUCs (or similar hardware) for Harvester nodes
+- 3 x NUCs (or similar hardware) for Harvester Control-Plane nodes 
+- 3 x NUCs (or similar hardware) for Harvester Worker nodes
 - 1 x admin workstation (I use a fourth NUC as `nuc-00`)
-- Internet connectivity (Community and Prime) or pre-synced Hauler store (Enclave)
+- Internet connectivity (Prime software ) and pre-synced Hauler store 
 - [Hardware Overview](./Hardware.md)
 
-For Prime and Enclave: SUSE Prime portal access — request a license from your SUSE Account Team.
+For Prime: SUSE Prime portal access — request a license from your SUSE Account Team.
 
 ---
 

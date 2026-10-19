@@ -1,0 +1,19 @@
+# Editor
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OpenTofu / Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# Secrets
+*.env
+secrets/
+kubeconfig*
+*.pem
+*.key
